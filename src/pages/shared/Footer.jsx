@@ -4,7 +4,7 @@ const Footer = () => {
       <nav className="grid grid-flow-col gap-4">
         <a className="link link-hover">About us</a>
         <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Estates</a>
+        <a className="link link-hover">Featured Spot</a>
       </nav>
       <nav>
         <div className="grid grid-flow-col gap-4">
@@ -44,7 +44,7 @@ const Footer = () => {
         </div>
       </nav>
       <aside>
-        <p>Copyright © 2024 - All right reserved by CrestView Properties Ltd</p>
+        <p>Copyright © 2024 - All right reserved by Journey Junction Ltd</p>
       </aside>
     </footer>
   );

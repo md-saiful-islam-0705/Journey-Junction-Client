@@ -22,7 +22,17 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("/properties.json"),
+        loader: () => fetch("http://localhost:3000/spots"),
+      },
+      {
+        path: "/details/:id", 
+        element: (
+          <PrivateRoute>
+            <ViewDetails />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/spots/${params.id}`),
       },
       {
         path: "/addtouristspot",

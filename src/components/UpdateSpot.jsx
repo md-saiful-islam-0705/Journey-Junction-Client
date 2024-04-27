@@ -112,7 +112,7 @@ const UpdateSpot = () => {
               />
             </label>
           </div>
-          {/* Country Name */}
+          
           <div>
             <label className="block font-bold">
               Country Name:
@@ -124,7 +124,7 @@ const UpdateSpot = () => {
               />
             </label>
           </div>
-          {/* Location */}
+          
           <div>
             <label className="block font-bold">
               Location:
@@ -136,7 +136,7 @@ const UpdateSpot = () => {
               />
             </label>
           </div>
-          {/* Short Description */}
+         
           <div>
             <label className="block font-bold">
               Short Description:
@@ -148,7 +148,7 @@ const UpdateSpot = () => {
               />
             </label>
           </div>
-          {/* Average Cost */}
+          
           <div>
             <label className="block font-bold">
               Average Cost:
@@ -160,7 +160,7 @@ const UpdateSpot = () => {
               />
             </label>
           </div>
-          {/* Seasonality */}
+          
           <div>
             <label className="block font-bold">
               Seasonality:
@@ -172,7 +172,7 @@ const UpdateSpot = () => {
               />
             </label>
           </div>
-          {/* Travel Time */}
+         
           <div>
             <label className="block font-bold">
               Travel Time:
@@ -184,7 +184,7 @@ const UpdateSpot = () => {
               />
             </label>
           </div>
-          {/* Total Visitors Per Year */}
+          
           <div>
             <label className="block font-bold">
               Total Visitors Per Year:

@@ -95,16 +95,22 @@ const handleSubmit = async (e) => {
             </div>
             <div className="form-control ">
               <label className="label">
-                <span className="label-text text-md font-bold">Country Name</span>
+                <span className="label-text text-md font-bold">Select Country</span>
               </label>
-              <input
-                type="text"
+              <select
                 name="country_Name"
                 value={formData.country_Name}
                 onChange={handleChange}
-                placeholder="Country Name"
-                className="input input-bordered"
-              />
+                className="select select-bordered"
+              >
+                <option value="">Select Country</option>
+                <option value="France">France</option>
+                <option value="Italy">Italy</option>
+                <option value="Spain">Spain</option>
+                <option value="England">England</option>
+                <option value="Netherlands">Netherlands</option>
+                <option value="Switzerland">Switzerland</option>
+              </select>
             </div>
             <div className="form-control ">
               <label className="label">

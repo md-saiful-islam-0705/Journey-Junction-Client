@@ -5,7 +5,7 @@ import Footer from "../pages/shared/Footer";
 import { FaLocationDot } from "react-icons/fa6";
 
 const ViewDetails = () => {
-  const { id } = useParams(); // Extract the ID parameter from the URL
+  const { id } = useParams();
   const [spot, setSpot] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

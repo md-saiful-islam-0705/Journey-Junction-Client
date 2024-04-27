@@ -11,6 +11,7 @@ import AddTouristsSpot from "../pages/AddTouristsSpot/AddTouristsSpot";
 import AllTouristSpots from "../pages/AllTouristSpots/AllTouristSpots";
 import ViewDetails from "../components/ViewDetails";
 import MyList from "../pages/MyList/MyList";
+import UpdateSpot from "../components/UpdateSpot";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,16 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`http://localhost:3000/user-spots`), // Fetch user's tourist spots
+      },
+      {
+        path: "/list/update/:id", 
+        element: (
+          <PrivateRoute>
+            <UpdateSpot></UpdateSpot>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/user-spots/${params.id}`),
       },
       
       {

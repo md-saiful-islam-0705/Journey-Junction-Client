@@ -2,8 +2,9 @@ import React, { useState, useEffect, useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Navbar from "../shared/Navbar";
 import Footer from "../shared/Footer";
+import Swal from "sweetalert2";
 
-const MyListPage = () => {
+const MyList = () => {
   const { user } = useContext(AuthContext);
   const [userSpots, setUserSpots] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -31,24 +32,48 @@ const MyListPage = () => {
     fetchUserSpots();
   }, [user]); // Fetch spots when user changes
 
-  const handleDelete = async (spotId) => {
-    try {
-      await fetch(`/user-spots/${spotId}`, {
-        method: "DELETE",
-      });
-      setUserSpots((prevSpots) =>
-        prevSpots.filter((spot) => spot._id !== spotId)
-      );
-    } catch (error) {
-      console.error("Error deleting spot:", error);
-    }
+  const handleDelete = (spotId) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "Yes, delete it!",
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          await fetch(`http://localhost:3000/user-spots/${spotId}`, {
+            method: "DELETE",
+          });
+  
+          setUserSpots((prevSpots) =>
+            prevSpots.filter((spot) => spot._id !== spotId)
+          );
+  
+          Swal.fire(
+            "Deleted!",
+            "Your spot has been deleted.",
+            "success"
+          );
+        } catch (error) {
+          console.error("Error deleting spot:", error);
+          Swal.fire(
+            "Error!",
+            "An error occurred while deleting the spot.",
+            "error"
+          );
+        }
+      }
+    });
   };
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <div className="container mx-auto py-8">
-        <h1 className="text-3xl font-bold mb-4">My List Page</h1>
+      <div className="flex-grow container mx-auto py-8">
+        <h1 className="text-3xl font-bold mb-4 ">My Listed Spot</h1>
         {loading ? (
           <p>Loading...</p>
         ) : (
@@ -77,7 +102,7 @@ const MyListPage = () => {
                     <td className=" py-2">
                       <button
                         className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mr-2"
-                        onClick={() => handleUpdate(spot)}
+                        onClick={() => handleUpdate(spot._id)}
                       >
                         Update
                       </button>
@@ -96,8 +121,8 @@ const MyListPage = () => {
         )}
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 
-export default MyListPage;
+export default MyList;

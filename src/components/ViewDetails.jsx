@@ -14,7 +14,7 @@ const ViewDetails = () => {
     setLoading(true);
 
     // Fetch spot details
-    fetch(`http://localhost:3000/spots/${id}`)
+    fetch(`https://assignment-10-server-inky-theta.vercel.app/spots/${id}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch spot details");

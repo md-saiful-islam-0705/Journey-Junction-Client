@@ -9,7 +9,6 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Helmet } from "react-helmet";
 
 const Login = () => {
   const { signInWithGoogle, signInWithGitHub, signIn } =
@@ -51,9 +50,6 @@ const Login = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Login-CrestView Properties</title>
-      </Helmet>
       <div className="flex flex-col min-h-screen">
         <Navbar></Navbar>
         <div className="flex-grow mb-10 ">

@@ -27,7 +27,7 @@ const AddTouristsSpot = () => {
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const response = await fetch('http://localhost:3000/spots', {
+    const response = await fetch('https://assignment-10-server-inky-theta.vercel.app/spots', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

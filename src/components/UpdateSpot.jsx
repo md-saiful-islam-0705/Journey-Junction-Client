@@ -20,7 +20,7 @@ const UpdateSpot = () => {
   });
 
   useEffect(() => {
-    fetch(`http://localhost:3000/spots/${id}`)
+    fetch(`https://assignment-10-server-inky-theta.vercel.app/spots/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setSpotData(data);
@@ -46,7 +46,7 @@ const UpdateSpot = () => {
     };
 
     
-    fetch(`http://localhost:3000/user-spots/${id}`, {
+    fetch(`https://assignment-10-server-inky-theta.vercel.app/user-spots/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

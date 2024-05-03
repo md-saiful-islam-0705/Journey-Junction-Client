@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Helmet } from "react-helmet";
+
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -64,9 +64,6 @@ const Register = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Register-CrestView Properties</title>
-      </Helmet>
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <div className="container mx-auto mb-10 flex-grow">

@@ -12,6 +12,7 @@ import AllTouristSpots from "../pages/AllTouristSpots/AllTouristSpots";
 import ViewDetails from "../components/ViewDetails";
 import MyList from "../pages/MyList/MyList";
 import UpdateSpot from "../components/UpdateSpot";
+import SelectedSpots from "../pages/SelectedSpots/SelectedSpots";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:3000/spots"),
+        loader: () => fetch("https://assignment-10-server-inky-theta.vercel.app/spots"),
 
       },
       {
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/spots/${params.id}`),
+          fetch(`https://assignment-10-server-inky-theta.vercel.app/spots/${params.id}`),
       },
       {
         path: "/addtouristspot",
@@ -46,8 +47,14 @@ const router = createBrowserRouter([
       {
         path: "/alltouristspots",
         element: <AllTouristSpots></AllTouristSpots>,
-        loader: () => fetch("http://localhost:3000/spots"),
+        loader: () => fetch("https://assignment-10-server-inky-theta.vercel.app/spots"),
       },
+      // {
+      //   path: "/selectedspots/:countryName",
+      //   element: <SelectedSpots></SelectedSpots>,
+      //   loader: ({ params }) => fetch(`https://assignment-10-server-inky-theta.vercel.app/spots/${params.countryName}`),
+      // },
+      
       {
         path: "/alltouristspots/details/:id", 
         element: (
@@ -56,7 +63,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/spots/${params.id}`),
+          fetch(`https://assignment-10-server-inky-theta.vercel.app/spots/${params.id}`),
       },
       {
         path: "/list", 
@@ -66,7 +73,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: () =>
-          fetch(`http://localhost:3000/user-spots`), 
+          fetch(`https://assignment-10-server-inky-theta.vercel.app/user-spots`), 
       },
       {
         path: "update/:id", 
@@ -76,7 +83,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/user-spots/${params.id}`),
+          fetch(`https://assignment-10-server-inky-theta.vercel.app/user-spots/${params.id}`),
       },
       
       {

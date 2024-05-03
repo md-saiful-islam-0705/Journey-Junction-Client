@@ -17,7 +17,7 @@ const MyList = () => {
       try {
         if (!user) return; // Ensure user is available
         const response = await fetch(
-          `http://localhost:3000/user-spots?userEmail=${user.email}`
+          `https://assignment-10-server-inky-theta.vercel.app/user-spots?userEmail=${user.email}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch user's spots");
@@ -46,7 +46,7 @@ const MyList = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await fetch(`http://localhost:3000/user-spots/${spotId}`, {
+          await fetch(`https://assignment-10-server-inky-theta.vercel.app/user-spots/${spotId}`, {
             method: "DELETE",
           });
 

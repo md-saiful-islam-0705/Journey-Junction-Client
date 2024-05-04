@@ -45,7 +45,7 @@ const MyList = () => {
       confirmButtonText: "Yes, delete it!",
     }).then(async (result) => {
       if (result.isConfirmed) {
-        try {
+        
           await fetch(`https://assignment-10-server-inky-theta.vercel.app/user-spots/${spotId}`, {
             method: "DELETE",
           });
@@ -55,14 +55,6 @@ const MyList = () => {
           );
 
           Swal.fire("Deleted!", "Your spot has been deleted.", "success");
-        } catch (error) {
-          console.error("Error deleting spot:", error);
-          Swal.fire(
-            "Error!",
-            "An error occurred while deleting the spot.",
-            "error"
-          );
-        }
       }
     });
   };

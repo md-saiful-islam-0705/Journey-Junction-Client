@@ -50,11 +50,11 @@ const router = createBrowserRouter([
         element: <AllTouristSpots></AllTouristSpots>,
         loader: () => fetch("https://assignment-10-server-inky-theta.vercel.app/spots"),
       },
-      // {
-      //   path: "/selectedspots/:countryName",
-      //   element: <SelectedSpots></SelectedSpots>,
-      //   loader: ({ params }) => fetch(`https://assignment-10-server-inky-theta.vercel.app/spots/${params.countryName}`),
-      // },
+      {
+        path: "/selectedspots/:countryName",
+        element: <SelectedSpots></SelectedSpots>,
+        loader: ({ params }) => fetch(`https://assignment-10-server-inky-theta.vercel.app/spots/${params.countryName}`),
+      },
       
       {
         path: "/alltouristspots/details/:id", 

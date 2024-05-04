@@ -48,11 +48,11 @@ const Navbar = () => {
           Login
         </NavLink>
       </li>
-      <li>
+      {/* <li>
         <NavLink to="/about" activeClassName="font-bold text-indigo-600">
           About
         </NavLink>
-      </li>
+      </li> */}
     </>
   );
 

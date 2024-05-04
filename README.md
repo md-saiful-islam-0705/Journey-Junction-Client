@@ -1,21 +1,19 @@
-# Crestview Properties
+# Journey Junction - Explore Europe's Hidden Gems
 
-[CrestView Properties Website](https://property-project-e2b84.web.app)
+Live Site: [Journey Junction](https://www.eurospot.com)
 
-## Features and Characteristics
-- Responsive design for mobile, tablet, and desktop views.
-- Utilizes environment variables for Firebase config keys.
-- Navbar with active routes and conditional user profile display.
-- Login and Register pages with password and email-based authentication, including social(GitHub) login options.
-- Banner section with a slider showcasing a minimum of 3 slides.
-- Estate Details page for in-depth information about selected properties, with protected routes ensuring authentication.
-- Custom 404 page for handling not found routes.
-- Extra private route with meaningful and relevant content.
-- Dynamic page titles for improved SEO and user experience.
-- Persistent user information display in the navbar using Firebase's onAuthStateChanged method.
-- Creation of a protected route for users to view and update their profile information securely using Firebase's updateProfile() method.
+## Key Features
+
+- **Unique Tourism Management Website:** JJ is a dedicated tourism management website focusing on Europe's diverse destinations .
+- **Responsive Design:** Our website is optimized for all devices, providing a seamless browsing experience across desktops, tablets, and mobile phones.
+- **User Authentication:** Secure email/password-based authentication and social login options (Google & GitHub) ensure a smooth login/register process.
+- **Tourists Spots Showcase:** Explore over a dozen European tourist spots, complete with detailed information, stunning images, and "View Details" functionality.
+- **Customizable Theme:** Switch between light and dark themes to suit your browsing preferences.
+
+
 
 ## npm Package Used
 - AOS Package
 - Animate.css
-- React-leaflet
+- React-simple-typewriter 
+- React-Awesome-reveal

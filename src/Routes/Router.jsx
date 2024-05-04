@@ -13,6 +13,7 @@ import ViewDetails from "../components/ViewDetails";
 import MyList from "../pages/MyList/MyList";
 import UpdateSpot from "../components/UpdateSpot";
 import SelectedSpots from "../pages/SelectedSpots/SelectedSpots";
+import Contact from "../pages/Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -97,6 +98,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About></About>,
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
       },
       {
         path: "/profile",

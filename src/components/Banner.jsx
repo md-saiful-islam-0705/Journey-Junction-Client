@@ -15,8 +15,8 @@ const Banner = () => {
           </a>
         </div>
         <div className="absolute bottom-5 left-0 right-0 text-center">
-          <Link to="/about">
-            <button className="  bg-gradient-to-r from-violet-500 to-pink-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+          <Link to="contact">
+            <button  className="  bg-gradient-to-r from-violet-500 to-pink-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
               Contact Us
             </button>
           </Link>

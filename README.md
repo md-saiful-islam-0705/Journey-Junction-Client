@@ -1,6 +1,6 @@
 # Journey Junction - Explore Europe's Hidden Gems
 
-Live Site: [Journey Junction](https://www.eurospot.com)
+Live Site: [Journey Junction](https://journey-junction-2024.web.app/)
 
 ## Key Features
 
